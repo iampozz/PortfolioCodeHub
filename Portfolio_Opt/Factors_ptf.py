@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-stock_data = pd.read_excel('C:\\Users\\pozzo\\Dropbox\\UniBG Works\\Ortobelli Paper\\Dow Jones excel.xlsx',
+stock_data = pd.read_excel('C:\\Users\\pozzo\\Dropbox\\Dow Jones excel.xlsx',
                            index_col = 'Dates')
 
 
@@ -10,7 +10,7 @@ pe_ratio =  stock_data.iloc[:,60:90].fillna(method = 'ffill').loc['2013-12-05':]
 mkt_cap = stock_data.iloc[:,150:180].fillna(method = 'ffill').loc['2013-12-05':]
 pb_ratio = stock_data.iloc[:,180:210].fillna(method = 'ffill').loc['2013-12-05':]
 
-djia = pd.read_excel('C:\\Users\\pozzo\Dropbox\\Cincinelli Paper\\Dow Jones data.xlsx', 
+djia = pd.read_excel('C:\\Users\\pozzo\Dropbox\\Dow Jones data.xlsx', 
                      index_col = 'dates').fillna(method = 'ffill')
 
 dataset = pd.concat((stock_price, djia), ignore_index=True, axis = 1)
