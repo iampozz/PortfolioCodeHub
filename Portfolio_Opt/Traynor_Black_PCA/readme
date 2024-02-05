@@ -1,0 +1,2 @@
+Python code that implement the Traynor-Black asset allocation model.
+Different PCA are implemented to get the noises from a multifactorial model (n° factors = n° component of PCA)
